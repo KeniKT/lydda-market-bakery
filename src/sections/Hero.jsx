@@ -1,7 +1,5 @@
-import { lazy, Suspense } from 'react'
 import { ArrowDown, ArrowUpRight, Sparkles } from 'lucide-react'
 import { motion } from 'framer-motion'
-const HeroCanvas = lazy(() => import('../components/3d/HeroCanvas'))
 const MotionDiv = motion.div
 
 export function Hero() {
@@ -15,7 +13,7 @@ export function Hero() {
       <div className="hero-actions"><a href="#order" className="button button-primary">Plan your order <ArrowUpRight size={18}/></a><a href="#menu" className="text-link">Explore today’s staples <ArrowDown size={16}/></a></div>
       <div className="hero-meta"><span><b>8am—9pm</b> Every day</span><span><b>100%</b> Homemade</span><span><b>22041</b> Falls Church</span></div>
     </div>
-    <div className="hero-visual"><Suspense fallback={<div className="canvas-fallback"/>}><HeroCanvas/></Suspense><div className="visual-label"><span>FERMENTED</span><b>with time, not shortcuts</b></div><div className="orbit-tag">እንጀራ • INJERA • ትኩስ • FRESH •</div></div>
+    <div className="hero-visual"><img src="/assets/hero-benchmark-clean.png" alt="Traditional Ethiopian Dabo bread" className="w-full h-auto max-h-[420px] object-contain mx-auto drop-shadow-xl transition-transform duration-500 hover:scale-105"/><div className="visual-label"><span>FERMENTED</span><b>with time, not shortcuts</b></div><div className="orbit-tag">እንጀራ • INJERA • ትኩስ • FRESH •</div></div>
     <div className="hero-index">EST. IN COMMUNITY <span>38°50′N / 77°11′W</span></div>
   </section>
 }

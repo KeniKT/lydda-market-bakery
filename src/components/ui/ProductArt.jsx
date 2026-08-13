@@ -1,3 +1,3 @@
-export function ProductArt({ type }) {
-  return <div className={`product-art art-${type}`} aria-hidden="true"><i/><i/><i/><span/></div>
+export function ProductArt({ src, alt, position = 'center' }) {
+  return <div className="product-art"><img src={src} alt={alt} loading="lazy" decoding="async" style={{ objectPosition: position }} /></div>
 }
